@@ -14,11 +14,11 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "requireFullScreen": true,
+      "bundleIdentifier": "br.com.heineken.myhnkapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -28,6 +28,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development",
+          "iPhoneDeploymentTarget": "12.0"
+        }
+      ]
+    ],
+    "extra": {
+      "environment": "production",
+      "oneSignalAppId": "SOME_ID"
     }
   }
 }
